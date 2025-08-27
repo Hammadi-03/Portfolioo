@@ -2,158 +2,70 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="asset/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet
+    <link rel="stylesheet" href="asset/css/nav.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-
-    <!-- Added AOS library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 <body>
-    <nav class="nav-container" data-aos="fade-down" data-aos-duration="1000">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="asset/src/img/Logo mee.png" alt="Logo Portfolio" style="height: 107px; border-radius: 20;">
-            </div>
+    <nav class="nav-container">
+        <div class="logo">
+            <img src="asset/src/img/Logo mee.png" alt="Logo Portfolio" style="margin: 10px;">
+        </div>
 
-            <div class="nav-links">
-                <div class="location">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Depok</span>
-                </div>
-
-                <div class="language-toggle">
-                    <button id="language-button">English/العربية</button>
-                </div>
-
-                <div class="link nav-item">
-                    <a href="#">
-                        <span class="arabic">الرئيسية</span>
-                        <span class="english">Home</span>
-                    </a>
-                </div>
-                
-                <div class="link nav-item">
-                    <a href="#">
-                        <span class="arabic">قصصنا</span>
-                        <span class="english">Story</span>
-                    </a>
-                </div>
-                
-                <div class="link nav-item">
-                    <a href="#">
-                        <span class="arabic">الشهادات</span>
-                        <span class="english">Certificate</span>
-                    </a>
-                </div>
-                
-                <div class="link nav-item">
-                    <a href="#">
-                        <span class="arabic">مهارات</span>
-                        <span class="english">Skills</span>
-                    </a>
-                </div>
-                
-                <div class="contact-button nav-item">
-                    <a href="#">
-                        <span class="arabic">تواصل معنا</span>
-                        <span class="english">Connect us</span>
-                    </a>
-                </div>
+        <div class="nav-links">
+            <div class="link nav-item">
+                <a href="#">
+                    <span class="arabic">رئيسة</span>
+                    <span class="english">Home</span>
+                </a>
             </div>
-            
-            <div class="link-button nav-item">
-                <a href="#" id="menu-button">= MENU</a>
+            <div class="link nav-item">
+                <a href="#">
+                    <span class="arabic">قصتي</span>
+                    <span class="english">My Story</span>
+                </a>
             </div>
+            <div class="link nav-item">
+                <a href="#">
+                    <span class="arabic">شهادات</span>
+                    <span class="english">Certificates</span>
+                </a>
+            </div>
+            <div class="link nav-item">
+                <a href="#">
+                    <span class="arabic">مهارات</span>
+                    <span class="english">Skills</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Depok</span>
         </div>
     </nav>
 
-    <div class="dropdown" id="dropdown">
-        <div class="hamburger-links">
-            <a href="#">Home</a>
-            <a href="#">Story</a>
-            <a href="#">Skills</a>
-            <a href="#">Certifications</a>
-            <a href="#">Connect us</a>
-        </div>
-        <div class="cancel" id="cancel-button">
-            <a href="#">X</a>
-        </div>
-    </div>
-
     <section class="main-container">
         <div class="image">
-            <img src="asset/src/img/bridge.jpeg" alt="mee.png" style="height: 400px; border-radius: 20; ">
+            <img src="asset/src/img/bridge.jpeg" alt="Profile Image">
         </div>
 
         <div class="content">
-            <h1>Howdy! I am <span>عبدالعزيز</span></h1> 
-            <p class="typewriter">I'm a <span></span></p>
+            <h1>Howdy! I am <span>عبدالعزيز</span></h1>
+            <p class="typewriter">I'm a <span>Developer</span></p>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>Doloremque perspiciatis obcaecati nulla reprehenderit <br>similique aliquam neque ad eveniet cumque ut!</p>
             <div class="btn">
-                <button>Download CV </button>
+                <button>Download CV</button>
             </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="footer-content">
-            <p>Copyright® 2025 Abdulaziz Hammadi. All rights reserved</p>
+            <p>Copyright© 2025 Abdulaziz Hammadi. All rights reserved</p>
         </div>
     </footer>
-
-    <script>
-
-        const menuButton = document.getElementById('menu-button');
-        const cancelButton = document.getElementById('cancel-button');
-        const dropdown = document.getElementById('dropdown');
-        
-        if (menuButton && dropdown) {
-            menuButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                dropdown.classList.add('active');
-            });
-        }
-        
-        if (cancelButton && dropdown) {
-            cancelButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                dropdown.classList.remove('active');
-            });
-        }
-        
-        document.addEventListener('click', function(e) {
-            if (dropdown.classList.contains('active') && 
-                !dropdown.contains(e.target) && 
-                e.target !== menuButton) {
-                dropdown.classList.remove('active');
-            }
-        });
-
-        // Initialize AOS
-        AOS.init();
-
-        const languageButton = document.getElementById('language-button');
-        let currentLanguage = 'English';
-
-        languageButton.addEventListener('click', function() {
-            currentLanguage = currentLanguage === 'English' ? 'العربية' : 'English';
-            document.querySelectorAll('.arabic, .english').forEach(span => {
-                span.style.display = span.classList.contains(currentLanguage.toLowerCase()) ? 'inline' : 'none';
-            });
-        });
-    </script>
-
-     <nav>
-        <div class="nav-container1">
-            <a href="#"><p><H1>Hello lol</H1></p></a>
-
-
-        </div>
-     </nav>
-
-
 </body>
 </html>

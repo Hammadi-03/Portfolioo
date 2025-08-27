@@ -1,0 +1,65 @@
+/* Updated navigation bar styling */
+.nav-container {
+    background: #ffffff; /* Set background to white */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+}
+
+.logo img {
+    height: 107px;
+    border-radius: 20px;
+    margin-left: 20px; /* Adjust alignment */
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column; /* Arabic above English */
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-item .arabic {
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-size: 16px;
+}
+
+.nav-item .english {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #000;
+}
+
+.location i {
+    font-size: 1.2rem;
+}
+
+.language-toggle button {
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.language-toggle button:hover {
+    background-color: #000;
+    color: #fff;
+}

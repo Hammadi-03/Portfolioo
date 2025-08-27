@@ -263,11 +263,13 @@ section {
     font-size: var(--h2-font-size);
     font-weight: var(--font-weight-bold);
     margin-bottom: 20px;
+    font-family: 'Noto Kufi Arabic', sans-serif; /* Arabic font */
 }
 
 .content h1 span {
     color: rgb(243, 189, 90);
     text-shadow: rgb(243, 189, 90) 0px 0px 7px; 
+    font-family: 'Poppins', sans-serif; /* English font */
 }
 .content .typewriter  {
     font-size: 3.5em;
@@ -308,6 +310,7 @@ section {
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+    font-family: 'Poppins', sans-serif; /* English font */
 }
 
 .content .btn button:hover {
@@ -448,6 +451,7 @@ section {
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif; /* English font */
         }
         
         .btn button:hover {
@@ -603,4 +607,23 @@ section {
     background-color: var(--text-color);
     color: #fff;
 }
+
+body {
+    font-family: 'Noto Kufi Arabic', sans-serif; /* Arabic font */
+}
+
+.nav-links .nav-item .english {
+    font-family: 'Poppins', sans-serif; /* English font */
+}
+
+.content h1 {
+    font-family: 'Noto Kufi Arabic', sans-serif; /* Arabic font */
+}
+
+.content h1 span {
+    font-family: 'Poppins', sans-serif; /* English font */
+}
+
+.content .btn button {
+    font-family: 'Poppins', sans-serif; /* English font */
 }
