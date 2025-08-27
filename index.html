@@ -43,9 +43,26 @@
 
         <div class="location">
             <i class="fas fa-map-marker-alt"></i>
-            <span>Depok</span>
+            <span class="english">Depok</span>
+            <i><img src="asset/src/img/Adobe Express - file (1).png" alt="location icon" style="width: ;"></i>
+        </div>
+
+        <div class="menu-icon">
+            <a href="#" id="menu-button">=</a>
         </div>
     </nav>
+
+    <div class="dropdown" id="dropdown">
+        <div class="hamburger-links">
+            <a href="#">Home</a>
+            <a href="#">My Story</a>
+            <a href="#">Certificates</a>
+            <a href="#">Skills</a>
+        </div>
+        <div class="cancel" id="cancel-button">
+            <a href="#">X</a>
+        </div>
+    </div>
 
     <section class="main-container">
         <div class="image">
@@ -55,7 +72,7 @@
         <div class="content">
             <h1>Howdy! I am <span>عبدالعزيز</span></h1>
             <p class="typewriter">I'm a <span>Developer</span></p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>Doloremque perspiciatis obcaecati nulla reprehenderit <br>similique aliquam neque ad eveniet cumque ut!</p>
+            <p>abdulaziz is form class x rpl is from diverse country wich in qatar and ihave been expreince in many sftwere like figma and like others etc.. <br>Doloremque perspiciatis obcaecati nulla reprehenderit <br>similique aliquam neque ad eveniet cumque ut!</p>
             <div class="btn">
                 <button>Download CV</button>
             </div>
@@ -67,5 +84,46 @@
             <p>Copyright© 2025 Abdulaziz Hammadi. All rights reserved</p>
         </div>
     </footer>
+
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const cancelButton = document.getElementById('cancel-button');
+        const dropdown = document.getElementById('dropdown');
+
+        if (menuButton && dropdown) {
+            menuButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                dropdown.classList.add('active');
+            });
+        }
+
+        if (cancelButton && dropdown) {
+            cancelButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                dropdown.classList.remove('active');
+            });
+        }
+
+        document.addEventListener('click', function(e) {
+            if (dropdown.classList.contains('active') && 
+                !dropdown.contains(e.target) && 
+                e.target !== menuButton) {
+                dropdown.classList.remove('active');
+            }
+        });
+    </script>
+
+    <a class="nav-link" href="#">
+  <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <!-- Outline pin -->
+    <path d="M12 22s-7-5.5-7-12a7 7 0 1 1 14 0c0 6.5-7 12-7 12Z"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="12" cy="10" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/>
+  </svg>
+  Depok
+</a>
+<a href="#"><img src="asset/src/img/icon.png" alt="Location icon" class="nav-icon"> Depok</a>
+
+
 </body>
 </html>
